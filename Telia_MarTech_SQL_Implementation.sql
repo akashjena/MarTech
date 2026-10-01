@@ -330,14 +330,14 @@ ON c.customer_id = m.customer_id;
    DATA QUALITY TESTS
    =========================================================== */
 
-/* Test 1 */
+/* Test 1   customer_id should not be null*/
 
 SELECT *
 FROM stg_customers
 WHERE customer_id IS NULL;
 
 
-/* Test 2 */
+/* Test 2  Customer_id should be unique*/
 
 SELECT
     customer_id,
@@ -347,7 +347,7 @@ GROUP BY customer_id
 HAVING COUNT(*) > 1;
 
 
-/* Test 3 */
+/* Test 3 Valid Subscription Plan */
 
 SELECT *
 FROM stg_customers
@@ -359,7 +359,7 @@ WHERE subscription_plan NOT IN
 );
 
 
-/* Test 4 */
+/* Test 4 Valid Subscription Status */
 
 SELECT *
 FROM stg_customers
