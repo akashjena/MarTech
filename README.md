@@ -73,3 +73,10 @@ Rolling windows are calculated using the latest available event date within the 
 ## Business Value
 
 The solution provides a governed and reusable segmentation framework that supports personalization, retention, upsell and winback campaigns.
+
+Git and GitHub practice branch.
+
+
+
+
+
